@@ -1,0 +1,43 @@
+.close {
+  &-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-button {
+    color: black;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
+
+.card {
+  min-width: 80%;
+}
+
+.mat-card {
+  &-title {
+    justify-content: space-around;
+  }
+
+  &-content {
+    min-height: 60vh;
+  }
+}
+
+h3 {
+  color: rgb(0,152,151);
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(237,44,85);
+  color: white;
+  padding: 5px !important;
+  margin-top: 5px !important;
+}

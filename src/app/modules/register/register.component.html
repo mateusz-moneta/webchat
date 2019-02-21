@@ -1,0 +1,17 @@
+<div class="container">
+  <header class="row d-block text-center">
+    <h2>{{ 'REGISTER.TITLE' | translate }}</h2>
+  </header>
+  <div class="row">
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="col-md-4 offset-md-4 col-sm-12" novalidate>
+      <app-single-control [control]="registerForm.controls['username']" [label]="'REGISTER.USERNAME' | translate" [placeholder]="'REGISTER.ENTER-USERNAME' | translate"></app-single-control>
+      <app-single-control [control]="registerForm.controls['email']" [label]="'REGISTER.EMAIL' | translate" [placeholder]="'REGISTER.ENTER-EMAIL' | translate"></app-single-control>
+      <app-single-control [control]="registerForm.controls['password']" [type]="'password'" [label]="'REGISTER.PASSWORD' | translate" [placeholder]="'REGISTER.ENTER-PASSWORD' | translate"></app-single-control>
+      <app-single-control [control]="registerForm.controls['repeatPassword']" [type]="'password'" [pattern]="registerForm.get('password').value" [label]="'REGISTER.REPEAT-PASSWORD' | translate" [placeholder]="'REGISTER.ENTER-REPEAT-PASSWORD' | translate"></app-single-control>
+      <button type="submit" class="btn btn-default">{{ 'REGISTER.SUBMIT' | translate }}</button>
+    </form>
+    <div class="col-md-4 offset-md-4 col-sm-12 text-center breakline">
+      <a [routerLink]="'/login'">{{ 'REGISTER.MESSAGE' | translate }}</a>
+    </div>
+  </div>
+</div>

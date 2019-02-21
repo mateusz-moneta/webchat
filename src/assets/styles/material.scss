@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+@import '~material-icons/iconfont/material-icons.css';
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-indigo);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include mat-core-theme($my-app-theme);
+@include mat-button-theme($my-app-theme);
+@include mat-button-toggle-theme($my-app-theme);
+@include mat-card-theme($my-app-theme);
+@include mat-dialog-theme($my-app-theme);
+@include mat-divider-theme($my-app-theme);
+@include mat-form-field-theme($my-app-theme);
+@include mat-icon-theme($my-app-theme);
+@include mat-input-theme($my-app-theme);
+@include mat-list-theme($my-app-theme);
+@include mat-menu-theme($my-app-theme);
+@include mat-paginator-theme($my-app-theme);
+@include mat-select-theme($my-app-theme);
+@include mat-slide-toggle-theme($my-app-theme);
+@include mat-toolbar-theme($my-app-theme);

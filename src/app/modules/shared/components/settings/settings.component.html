@@ -1,0 +1,22 @@
+<div class="close-container">
+  <div class="close-button" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </div>
+</div>
+<div class="content-container">
+  <div class="title">
+    {{ 'SETTINGS.LANGUAGE' | translate }}
+  </div>
+  <div>
+    <app-carousel (valueChange)="valueChange($event)">
+      <ng-container *ngFor="let language of languages;">
+        <ng-container *appCarouselItem>
+          <div class="item">{{ language.title }}</div>
+        </ng-container>
+      </ng-container>
+    </app-carousel>
+  </div>
+</div>
+<div class="save-container">
+  <button class="save-button" (click)="save()">{{ 'SETTINGS.SAVE' | translate }}</button>
+</div>

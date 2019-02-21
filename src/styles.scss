@@ -1,0 +1,102 @@
+@import "assets/styles/material";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+@import "~froala-editor/css/froala_editor.pkgd.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import url(//fonts.googleapis.com/css?family=Raleway:400,700);
+
+body {
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+
+  *:not(.mat-icon):not(.material-icon) {
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+
+  /* Track */
+  &-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  &-thumb {
+    background: rgb(237, 44, 85); 
+    border-radius: 10px;
+
+    /* Handle on hover */
+    &:hover {
+      background: #b30000; 
+    }
+  }
+}
+
+button {
+  &[type=submit] {
+    background-color: transparent !important;
+    border: 2px solid white;
+    color: white;
+    background-image: none;
+    width: 100%;
+    min-height: 50px;
+    box-shadow: none;
+    text-shadow: none;
+
+    &:hover {
+      color: white; 
+    }
+  }
+}
+
+.form-group, form {
+  border: none !important;
+}
+
+input {
+  padding: 20px !important;
+
+  &.ng-invalid::-webkit-input-placeholder {
+    color: white;
+  }
+}
+
+a {
+  color: white;
+
+  &:hover, &:active {
+    color: white;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+.breakline {
+  margin-top: 10px; 
+}
+
+.mat {
+  &-dialog-container {
+    position: relative;
+  }
+}
+
+.ng {
+  &-invalid {
+    border: 1px solid rgb(230, 33, 99);
+    background-color: transparent;
+    color: white;
+  }
+
+  &-valid {
+    border: 1px solid lightgreen;
+    background-color: transparent;
+    color: white;
+  }
+}

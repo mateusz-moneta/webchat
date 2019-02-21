@@ -1,0 +1,18 @@
+.message {
+  &-template {
+    padding: 35px;
+    min-height: 150px; 
+    border-radius: 25px; 
+    color: white;
+    margin-top: 20px;
+  }
+  
+  &-header {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &-content {
+    padding: 5px 15px;
+  }
+}

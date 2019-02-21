@@ -1,0 +1,51 @@
+<div>
+  <div class="container">
+    <mat-toolbar>
+      <span>{{ 'DASHBOARD.TITLE' | translate }}</span>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item (click)="settings()">{{ 'DASHBOARD.SETTINGS' | translate }}</button>
+        <button mat-menu-item (click)="logout()">{{ 'DASHBOARD.LOGOUT' | translate }}</button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+  <div class="container">
+    <div class="container">
+      <div fxLayout="column" fxLayoutGap="20px" fxLayout.gt-md="row"  fxLayoutAlign="space-around center" class="content">
+        <div class="blocks">
+          <button mat-raised-button class="create-conversation-button" (click)="createConversation()">
+            <mat-icon>add</mat-icon> {{ 'DASHBOARD.CREATE-ROOM' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container">
+      <div fxLayout="row" fxLayoutAlign="center center" class="content">
+        <mat-card class="card" >
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <h3>{{ 'DASHBOARD.PANEL-TITLE' | translate }}</h3>
+          </mat-card-title>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item *ngFor="let conversation of conversations" class="conversation">
+                <mat-icon mat-list-icon>compare_arrows</mat-icon>
+                <h4 class="conversation-header-username" mat-line>{{ conversation.users }}</h4>
+                <mat-divider [vertical]="true"></mat-divider>
+                <p class="conversation-header-date" mat-line>{{ conversation.date | datetime }}</p>
+                <mat-divider [vertical]="true"></mat-divider>
+                <button class="join-button" mat-line (click)="joinToConversation(conversation.conversationID)">{{ 'DASHBOARD.JOIN-TO-ROOM' | translate }}</button>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-footer>
+            <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="[10,15,25]" [pageIndex]="currentPage" (page)="pageEvent = handlePaginator($event)"></mat-paginator>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

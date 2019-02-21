@@ -1,0 +1,32 @@
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 6000px;
+}
+
+.carousel {
+  &-inner {
+    display: flex;
+  }
+
+  &-wrapper {
+    overflow: hidden;
+  }
+}

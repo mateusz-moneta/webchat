@@ -1,0 +1,35 @@
+@media screen and (max-width: 480px) {
+  .content-container {
+    transform: translateY(20%);
+  }
+
+  .item {
+    width: 130px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .content-container {
+    transform: translateY(50%);
+  }
+
+  .item {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .content-container {
+    transform: translateY(10%) !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .content-container {
+    transform: translateY(50%);
+  }
+
+  .item {
+    width: 200px;
+  }
+}

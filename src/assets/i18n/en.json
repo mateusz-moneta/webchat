@@ -1,0 +1,51 @@
+{
+  "LOGIN" : {
+    "TITLE" : "Log in",
+    "USERNAME" : "Username",
+    "PASSWORD": "Password",
+    "REMEMBER": "Remember!",
+    "SUBMIT": "Log in!",
+    "MESSAGE": "If you do not have an account, register!",
+    "ENTER-USERNAME": "Enter username",
+    "ENTER-PASSWORD": "Enter password",
+    "USER-UNREGISTERED": "User has not been registered.",
+    "INCORRECT-PASSWORD": "Incorrect password"
+  },
+  "REGISTER" : {
+    "TITLE" : "Register",
+    "EMAIL": "E-mail",
+    "USERNAME" : "Username",
+    "PASSWORD": "Password",
+    "REPEAT-PASSWORD": "Repeat password",
+    "SUBMIT": "Register in!",
+    "MESSAGE": "If you already have an account, log in!",
+    "ENTER-USERNAME": "Enter username",
+    "ENTER-EMAIL": "Enter e-mail",
+    "ENTER-PASSWORD": "Enter password",
+    "ENTER-REPEAT-PASSWORD": "Repeat password",
+    "USERNAME-BUSY": "Username is busy.",
+    "EMAIL-BUSY": "E-mail is busy.",
+    "USER-REGISTERED": "User has been registered."
+   },
+  "DASHBOARD" : {
+    "TITLE" : "Webchat",
+    "LOGOUT": "Log out",
+    "SETTINGS": "Settings",
+    "PANEL-TITLE": "Last conversations",
+    "CREATE-ROOM": "Create a conversation",
+    "JOIN-TO-ROOM": "Join to conversation"
+  },
+  "SETTINGS" : {
+    "LANGUAGE": "Language",
+    "SAVE": "Save"
+  },
+  "USERS" : {
+    "TITLE": "Users",
+    "CREATE-ROOM": "Conversation",
+    "LIST-EMPTY": "List of users is empty."
+  },
+  "CONVERSATION" : {
+    "SEND-MESSAGE": "Send message",
+    "LEAVE": "Leave a message"
+  }
+}

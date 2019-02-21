@@ -1,0 +1,9 @@
+<div class="message-container container">
+  <div [ngClass]="(backgroundColor === 'rgb(237,44,85)') ? 'offset-md-2 offset-xs-1' : ''" class="col-md-10 col-xs-11 message-template" [ngStyle]="{ 'background-color': backgroundColor }">
+    <div class="row message-header">
+      <div class="col-md-4 col-xs-4">{{ username }}</div>
+      <div class="col-md-4 col-xs-8">{{ date }}</div>
+    </div>
+    <div class="row message-content" [innerHTML]="message | safeHtml"></div>
+  </div>
+</div>

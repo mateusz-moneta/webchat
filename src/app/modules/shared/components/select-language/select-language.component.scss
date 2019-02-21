@@ -1,0 +1,15 @@
+.row {
+  padding: 0 15px;
+}
+
+.mat-select {
+  text-align: left !important;
+  padding: 10px 15px;
+  text-align: center;
+  color: white !important;
+  background-color: white;
+
+  &-content {
+    font-size: 1.4em;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="close-container">
+  <div class="close-button" (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center" class="content">
+  <mat-card class="card" >
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+      <h3>{{ 'USERS.TITLE' | translate }}</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let user of list">
+          <mat-icon mat-list-icon>transfer_within_a_station</mat-icon>
+          <h4 mat-line>{{ user.username }}</h4>
+          <button mat-line (click)="createConversation(user.username)">{{ 'USERS.CREATE-ROOM' | translate }}</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-paginator #paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="[5,10]" [pageIndex]="currentPage" (page)="pageEvent = handlePaginator($event)"></mat-paginator>
+    </mat-card-footer>
+  </mat-card>
+</div>

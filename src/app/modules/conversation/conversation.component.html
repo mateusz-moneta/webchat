@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <mat-toolbar>
+      <button mat-icon-button (click)="goToDashboard()">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+</div>
+<div class="container conversations-container">
+  <template #messagesContainer></template>
+</div>
+<div class="container message-container">
+  <app-text-editor [(message)]="messageText"></app-text-editor>
+  <button class="message-send" (click)="sendMessage()">{{ 'CONVERSATION.SEND-MESSAGE' | translate }}</button>
+</div>
