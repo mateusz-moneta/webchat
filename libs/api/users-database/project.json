@@ -1,0 +1,22 @@
+{
+  "root": "libs/api/users-database",
+  "sourceRoot": "libs/api/users-database/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/users-database/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/users-database"],
+      "options": {
+        "jestConfig": "libs/api/users-database/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

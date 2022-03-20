@@ -2,7 +2,9 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-auth": "libs/api/auth",
     "api-database": "libs/api/database",
+    "api-users-database": "libs/api/users-database",
     "webchat": "apps/webchat",
     "webchat-e2e": "apps/webchat-e2e"
   }
