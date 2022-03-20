@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@webchat/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@webchat/api/database": ["libs/api/database/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
