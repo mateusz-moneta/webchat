@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/webchat/auth-data-access",
+  "sourceRoot": "libs/webchat/auth-data-access/src",
+  "prefix": "webchat",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/webchat/auth-data-access"
+      ],
+      "options": {
+        "jestConfig": "libs/webchat/auth-data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/webchat/auth-data-access/src/**/*.ts",
+          "libs/webchat/auth-data-access/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -20,7 +20,13 @@
       "@webchat/api/database": ["libs/api/database/src/index.ts"],
       "@webchat/api/messages": ["libs/api/messages/src/index.ts"],
       "@webchat/api/users": ["libs/api/users/src/index.ts"],
-      "@webchat/api/users-database": ["libs/api/users-database/src/index.ts"]
+      "@webchat/api/users-database": ["libs/api/users-database/src/index.ts"],
+      "@webchat/webchat/auth-data-access": [
+        "libs/webchat/auth-data-access/src/index.ts"
+      ],
+      "@webchat/webchat/login-feature": [
+        "libs/webchat/login-feature/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

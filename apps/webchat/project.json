@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/webchat",
         "index": "apps/webchat/src/index.html",
@@ -14,8 +16,14 @@
         "polyfills": "apps/webchat/src/polyfills.ts",
         "tsConfig": "apps/webchat/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/webchat/src/favicon.ico", "apps/webchat/src/assets"],
-        "styles": ["apps/webchat/src/styles.scss"],
+        "assets": [
+          "apps/webchat/src/favicon.ico",
+          "apps/webchat/src/assets"
+        ],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/webchat/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -83,7 +91,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/webchat"],
+      "outputs": [
+        "coverage/apps/webchat"
+      ],
       "options": {
         "jestConfig": "apps/webchat/jest.config.js",
         "passWithNoTests": true

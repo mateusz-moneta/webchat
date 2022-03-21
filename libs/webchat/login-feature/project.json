@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/webchat/login-feature",
+  "sourceRoot": "libs/webchat/login-feature/src",
+  "prefix": "webchat",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/webchat/login-feature"
+      ],
+      "options": {
+        "jestConfig": "libs/webchat/login-feature/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/webchat/login-feature/src/**/*.ts",
+          "libs/webchat/login-feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -8,6 +8,8 @@
     "api-messages": "libs/api/messages",
     "api-users": "libs/api/users",
     "webchat": "apps/webchat",
-    "webchat-e2e": "apps/webchat-e2e"
+    "webchat-e2e": "apps/webchat-e2e",
+    "webchat-auth-data-access": "libs/webchat/auth-data-access",
+    "webchat-login-feature": "libs/webchat/login-feature"
   }
 }

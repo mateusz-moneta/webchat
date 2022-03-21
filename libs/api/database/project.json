@@ -4,14 +4,20 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["libs/api/database/**/*.ts"]
+        "lintFilePatterns": [
+          "libs/api/database/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/api/database"],
+      "outputs": [
+        "coverage/libs/api/database"
+      ],
       "options": {
         "jestConfig": "libs/api/database/jest.config.js",
         "passWithNoTests": true
