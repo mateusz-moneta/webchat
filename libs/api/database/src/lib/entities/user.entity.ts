@@ -1,4 +1,3 @@
-import { IsEmail, Length } from 'class-validator';
 import {
   BaseEntity,
   Column,
@@ -13,16 +12,17 @@ export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: String })
-  @Length(2, 30, { message: 'The name must be at least 2 but not longer than 30 characters' })
+  @Column()
   username: string;
 
-  @Column({ type: String })
-  @IsEmail({}, { message: 'Incorrect email' })
+  @Column()
   email: string;
 
-  @Column({ type: String })
+  @Column()
   password: string;
+
+  @Column({ default: true })
+  active: boolean;
 
   @CreateDateColumn({ type: 'timestamp' })
   created_at: Date;

@@ -3,8 +3,10 @@
   "projects": {
     "api": "apps/api",
     "api-auth": "libs/api/auth",
+    "api-conversations": "libs/api/conversations",
     "api-database": "libs/api/database",
-    "api-users-database": "libs/api/users-database",
+    "api-messages": "libs/api/messages",
+    "api-users": "libs/api/users",
     "webchat": "apps/webchat",
     "webchat-e2e": "apps/webchat-e2e"
   }

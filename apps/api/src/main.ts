@@ -3,8 +3,8 @@
  * This is only a minimal backend to get started.
  */
 
-import { Logger, ValidationPipe } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
+import { ClassSerializerInterceptor, Logger, ValidationPipe } from '@nestjs/common';
+import { NestFactory, Reflector } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import { AppModule } from './app/app.module';
@@ -21,6 +21,9 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
 
   app.setGlobalPrefix(globalPrefix);
+  app.useGlobalInterceptors(
+    new ClassSerializerInterceptor(app.get(Reflector))
+  );
   app.useGlobalPipes(new ValidationPipe());
 
   SwaggerModule.setup('api', app, document);

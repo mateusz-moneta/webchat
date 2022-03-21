@@ -3,14 +3,18 @@ import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
 
 import { ApiAuthModule } from '@webchat/api/auth';
+import { ApiConversationsModule } from '@webchat/api/conversations';
 import { ApiDatabaseModule } from '@webchat/api/database';
-import { ApiUsersDatabaseModule } from '@webchat/api/users-database';
+import { ApiMessagesModule } from '@webchat/api/messages';
+import { ApiUsersModule } from '@webchat/api/users';
 
 @Module({
   imports: [
     ApiAuthModule,
+    ApiConversationsModule,
     ApiDatabaseModule,
-    ApiUsersDatabaseModule,
+    ApiMessagesModule,
+    ApiUsersModule,
     ConfigModule.forRoot({
       validationSchema: Joi.object({
         POSTGRES_HOST: Joi.string().required(),

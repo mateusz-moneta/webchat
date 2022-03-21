@@ -2,6 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { Conversation } from './entities/conversation.entity';
+import { Message } from './entities/message.entity';
+import { User } from './entities/user.entity';
+
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
@@ -13,7 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DB'),
-        autoLoadEntities: true,
+        entities: [Conversation, Message, User],
         synchronize: true
       })
     })

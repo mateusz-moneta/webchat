@@ -2,7 +2,7 @@ import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-prop
 import { IsEmail, IsString, Length, Matches } from 'class-validator';
 
 import { UniqueOnDatabase } from '../validators/unique.validator';
-import { User } from '@webchat/api/users-database';
+import { User } from '@webchat/api/database';
 
 export class RegisterDto {
   @ApiModelProperty()

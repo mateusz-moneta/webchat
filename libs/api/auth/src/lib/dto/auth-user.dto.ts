@@ -5,4 +5,8 @@ import { UserDto } from './user.dto';
 export class AuthUserDto extends UserDto {
   @ApiModelProperty()
   accessToken: string;
+
+  constructor(partial: Partial<AuthUserDto>) {
+    super(partial);
+  }
 }

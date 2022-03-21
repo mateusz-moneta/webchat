@@ -1,12 +1,13 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, UnauthorizedException, UseGuards } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
 import { AuthService } from '../services/auth/auth.service';
+import { AuthUserDto } from '../dto/auth-user.dto';
 import { LoginDto } from '../dto/login.dto';
 import { RegisterDto } from '../dto/register.dto';
 import { UserDto } from '../dto/user.dto';
-import { JwtService } from '@nestjs/jwt';
-import { AuthUserDto } from '../dto/auth-user.dto';
+import { LocalAuthGuard } from '../guards/local-auth/local-auth.guard';
 
 @Controller('auth')
 export class AuthController {
@@ -22,10 +23,16 @@ export class AuthController {
   async login(@Body() loginDto: LoginDto): Promise<AuthUserDto> {
     const payload = await this.authService.login(loginDto);
 
-    return {
-      ...payload,
-      accessToken: this.jwtService.sign(payload)
-    };
+    try {
+      const accessToken = this.jwtService.sign(payload);
+
+      return new AuthUserDto({
+        ...payload,
+        accessToken
+      });
+    } catch (error) {
+      throw new UnauthorizedException();
+    }
   }
 
   @ApiTags('auth')

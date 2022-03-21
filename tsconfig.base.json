@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@webchat/api/auth": ["libs/api/auth/src/index.ts"],
+      "@webchat/api/conversations": ["libs/api/conversations/src/index.ts"],
       "@webchat/api/database": ["libs/api/database/src/index.ts"],
+      "@webchat/api/messages": ["libs/api/messages/src/index.ts"],
+      "@webchat/api/users": ["libs/api/users/src/index.ts"],
       "@webchat/api/users-database": ["libs/api/users-database/src/index.ts"]
     }
   },

@@ -1,0 +1,22 @@
+{
+  "root": "libs/api/conversations",
+  "sourceRoot": "libs/api/conversations/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/conversations/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/conversations"],
+      "options": {
+        "jestConfig": "libs/api/conversations/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
