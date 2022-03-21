@@ -1,7 +1,9 @@
 import {
   BaseEntity, Column,
   CreateDateColumn,
-  Entity, ManyToOne,
+  Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn
 } from 'typeorm';
@@ -14,10 +16,12 @@ export class Message extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(type => Conversation)
+  @ManyToOne(() => Conversation, { cascade: ["remove"] })
+  @JoinColumn({ name: 'conversationId' })
   conversation: Conversation;
 
-  @ManyToOne(type => User)
+  @ManyToOne(() => User, { cascade: ["remove"] })
+  @JoinColumn({ name: 'authorId' })
   author: User;
 
   @Column()

@@ -1,14 +1,11 @@
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
-import { IsEmail, IsString, Length, Matches } from 'class-validator';
+import { IsString, Length, Matches } from 'class-validator';
 
 import { passwordConfig } from '../config/password.config';
-import { UniqueOnDatabase } from '../validators/unique.validator';
-import { User } from '@webchat/api/database';
 
-export class RegisterDto {
+export class ChangePasswordDto {
   @ApiModelProperty()
   @IsString()
-  @UniqueOnDatabase(User)
   @Length(2, 30)
   username: string;
 
@@ -17,8 +14,4 @@ export class RegisterDto {
   @Length(4, 20)
   @Matches(passwordConfig)
   password: string;
-
-  @ApiModelProperty()
-  @IsEmail()
-  email: string;
 }

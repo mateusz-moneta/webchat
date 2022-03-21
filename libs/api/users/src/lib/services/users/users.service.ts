@@ -6,6 +6,15 @@ import { UserDto } from '@webchat/api/auth';
 
 @Injectable()
 export class UsersService {
+  async getUser(id: string): Promise<UserDto> {
+    return await getConnection()
+      .createQueryBuilder()
+      .select(["id", "username", "email"])
+      .where("id = :id", { id })
+      .from(User, "user")
+      .getRawOne();
+  }
+
   async getUsers(): Promise<UserDto[]> {
     return await getConnection()
       .createQueryBuilder()
